@@ -1,0 +1,50 @@
+<div class="container">
+    <br>
+    <h3>Alterar Filme</h3>
+    <br>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group row">
+            <div class="col-4">
+                <label for="titulo">Título</label>
+                <input type="text" class="form-Control" id="titulo" name="titulo" [(ngModel)]="filme.titulo">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label for="diretor">Diretor</label>
+                <input type="text" class="form-Control" id="diretor" name="diretor" [(ngModel)]="filme.diretor">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label for="anolancamento">Ano de Lançamento</label>
+                <input type="text" class="form-Control" id="anolancamento" name="anolancamento" [(ngModel)]="filme.anolancamento">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label for="genero">Gênero</label>
+                <input type="text" class="form-Control" id="genero" name="genero" [(ngModel)]="filme.genero">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label for="duracao">Duração</label>
+                <input type="text" class="form-Control" id="duracao" name="duracao" [(ngModel)]="filme.duracao">
+            </div>
+        </div>
+
+        <br>
+        <div class="form-group row">
+            <div class="col-4">
+                <button class="btn btn-info" type="submit">Salvar</button>
+                <button (click)="voltar()" class="btn btn-success" style="margin-left: 10px;">Voltar</button>
+            </div>
+        </div>
+    </form>
+</div>

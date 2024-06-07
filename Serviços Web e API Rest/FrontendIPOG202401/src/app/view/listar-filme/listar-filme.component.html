@@ -1,0 +1,36 @@
+<h2 class="text-center">Lista de Filmes</h2>
+<div class="container">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Diretor</th>
+                <th>Ano Lançamento</th>
+                <th>Gênero</th>
+                <th>Duração</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let filme of filmes">
+                    <td>{{ filme.id }}</td>
+                    <td>{{ filme.titulo }}</td>
+                    <td>{{ filme.diretor }}</td>
+                    <td>{{ filme.anolancamento }}</td>
+                    <td>{{ filme.genero }}</td>
+                    <td>{{ filme.duracao }}</td>
+                    <td>
+                        <button (click)="consultarFilme(filme.id)" class="btn btn-success" style="margin-left: 10px;">Consultar</button>
+                        <button (click)="alterarFilme(filme.id)" class="btn btn-info" style="margin-left: 10px;">alterar</button>
+                        <button (click)="excluirFilme(filme.id)" class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
+                    </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <br>
+    <button (click)="inserirFilme()" class="btn btn-info" style="margin-left: 10px;">Inserir Novo Filme</button>
+</div>
